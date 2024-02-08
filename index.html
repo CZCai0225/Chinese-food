@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китайский продуктовый центр</title>
+    <link rel="stylesheet" href="./css/rest.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- 引入swipercss文件样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+    <script>
+        function showPopup() {
+            var popupWindow = document.getElementById("popup");
+            var closeButton = document.getElementById("close-button");
+            popupWindow.style.display = "block"; /* 显示弹窗 */
+            closeButton.addEventListener("click", function () {
+                popupWindow.style.display = "none"; /* 关闭弹窗 */
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header style="background-color:#E8E8E8">
+        <h1 style="text-align: center;font-size: 60px;">Китайский продуктовый центр</h1>
+    </header>
+    <!-- 轮播图区域 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color: #F77619;">
+                <div class="main-banner">
+                    <img src="./img/月饼.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-color: #E8E8E8;">
+                <div class="main-banner">
+                    <img src="./img/泡椒凤爪.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-color: #023353;">
+                <div class="main-banner">
+                    <img src="./img/绿茶.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-color: #E8E8E8;">
+                <div class="main-banner">
+                    <img src="./img/老干妈.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-color: #718CF5;">
+                <div class="main-banner">
+                    <img src="./img/螺蛳粉.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-color: #F6712C;">
+                <div class="main-banner">
+                    <img src="./img/辣条.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"> </script>
+    <script>
+        let mySwiper = new Swiper('.swiper-container', {
+            // 分页器样式  
+            pagination: {
+                // 选择到你的分页类名
+                el: '.swiper-pagination',
+                //点击分页 切换你的轮播图
+                clickable: true,
+            },
+            centeredSlides: true,
+            // 自动切换
+            autoplay: true,
+            autoplay: {
+                //自动切换时间间隔
+                delay: 2000,
+            },
+            // 切换效果
+            effect: 'fade',
+            // 无限循环播放
+            loop: true
+        });
+    </script>
+    <!-- 这是弹框的内容 -->
+    <div id="popup">
+        <div><img src="./img/whatsapp.jpg" alt="" width="300" height="300"></div>
+        <div>Функция покупок в режиме реального времени пока не поддерживается, пожалуйста, свяжитесь с сотрудниками
+            Whatsapp, чтобы оформить заказ на еду.</div>
+        <button id="close-button">закрывать</button>
+    </div>
+    <!-- 天猫超市 -->
+    <div class="TMmarket">
+        <div class="left">
+            <img src="./img/零食大礼包.jpg" alt="">
+        </div>
+        <div class="right">
+            <ul>
+                <!-- 第一个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <ul>
+                            <li>量贩装</li>
+                            <li></li>
+                        </ul>
+                        <div class="triangle">
+                            <div>
+                                <img src="./img/勾.png" alt="" width="23" height="23">
+                                <p>单件包邮</p>
+                            </div>
+                            <p>低价享不停</p>
+
+                        </div>
+                        <img src="./img/泡椒凤爪.jpg" alt="" width="230" height="230">
+                    </a></li>
+                <!-- 第二个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/绿茶.jpg" alt=""></div>
+                        <div class="text">
+                            <p>绿茶</p>
+                            <p>爆款10包整箱</p>
+                            <p>￥500</p>
+                        </div>
+                    </a></li>
+                <!-- 第三个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/猪肉干.jpg" alt=""></div>
+                        <div class="text">
+                            <p>猪肉干</p>
+                            <p>爆款12包整箱</p>
+                            <p>￥150</p>
+                        </div>
+                    </a></li>
+                <!-- 第四个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/老干妈.jpg" alt=""></div>
+                        <div class="text">
+                            <p>老干妈</p>
+                            <p>爆款12瓶整箱</p>
+                            <p>￥120</p>
+                        </div>
+                    </a></li>
+                <!-- 第五个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/辣条.jpg" alt=""></div>
+                        <div class="text">
+                            <p>辣条</p>
+                            <p>爆款15包整箱</p>
+                            <p>￥50</p>
+                        </div>
+                    </a></li>
+                <!-- 第六个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/百味坚果.png" alt=""></div>
+                        <div class="text">
+                            <p>百味坚果</p>
+                            <p>爆款10包整箱</p>
+                            <p>￥220</p>
+                        </div>
+                    </a></li>
+                <!-- 第七个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/螺蛳粉.jpg" alt=""></div>
+                        <div class="text">
+                            <p>螺蛳粉</p>
+                            <p>爆款3包整箱</p>
+                            <p>￥49</p>
+                        </div>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="TMLL_list">
+        <!-- 左边 -->
+        <div class="left">
+            <ul>
+                <li><a href="#" onclick="showPopup()"><img src="./img/紫色.jpg" alt="">
+                        <div class="text">
+                            <ul>
+                                <li>进口</li>
+                                <li>尖货</li>
+                            </ul>
+                            <ul>
+                                <li>国庆狂欢节</li>
+                                <li>爆款直降</li>
+                            </ul>
+                        </div>
+                        <div class="tu">
+                            <img src="./img/图标箭头.png" alt="">
+                        </div>
+                    </a></li>
+
+                <li><a href="#" onclick="showPopup()"><img src="./img/红色.jpg" alt="">
+                        <div class="text">
+                            <ul>
+                                <li>进口</li>
+                                <li>品质</li>
+                            </ul>
+                            <ul>
+                                <li>直营精选</li>
+                                <li>一触即达</li>
+                            </ul>
+                        </div>
+                        <div class="tu">
+                            <img src="./img/图标箭头.png" alt="">
+                        </div>
+
+                    </a></li>
+            </ul>
+
+        </div>
+        <!-- 右边 -->
+        <div class="right">
+            <ul>
+                <!-- 第1个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/海带丝.jpg" alt=""></div>
+                        <div class="text">
+                            <p>海带丝</p>
+                            <p>爆款12包整箱</p>
+                            <p>￥35</p>
+                        </div>
+                    </a></li>
+                <!-- 第2个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/核桃.png" alt=""></div>
+                        <div class="text">
+                            <p>核桃</p>
+                            <p>爆款12包整箱</p>
+                            <p>￥49</p>
+                        </div>
+                    </a></li>
+                <!-- 第3个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/辣条混.jpg" alt=""></div>
+                        <div class="text">
+                            <p>混合辣条包装</p>
+                            <p>爆款20包整箱</p>
+                            <p>￥60</p>
+                        </div>
+                    </a></li>
+                <!-- 第4个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/红豆饼.jpg" alt=""></div>
+                        <div class="text">
+                            <p>红豆饼</p>
+                            <p>爆款12枚整箱</p>
+                            <p>￥29.8</p>
+                        </div>
+                    </a></li>
+                <!-- 第5个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/卤鸡翅.jpg" alt=""></div>
+                        <div class="text">
+                            <p>卤鸡翅</p>
+                            <p>爆款10枚整箱</p>
+                            <p>￥20</p>
+                        </div>
+                    </a></li>
+                <!-- 第6个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/牛肉条.jpg" alt=""></div>
+                        <div class="text">
+                            <p>牛肉条</p>
+                            <p>爆款15包整箱</p>
+                            <p>￥200</p>
+                        </div>
+                    </a></li>
+                <!-- 第7个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/山药条.jpg" alt=""></div>
+                        <div class="text">
+                            <p>山药干食品</p>
+                            <p>爆款10包整箱</p>
+                            <p>￥50</p>
+                        </div>
+                    </a></li>
+                <!-- 第8个商品 -->
+                <li><a href="#" onclick="showPopup()">
+                        <div class="pic"><img src="./img/猫耳朵.jpg" alt=""></div>
+                        <div class="text">
+                            <p>猫耳朵小食</p>
+                            <p>爆款20包整箱</p>
+                            <p>￥50</p>
+                        </div>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 版权区域 -->
+    <div class="copyright">Все права защищены.
+        Никакая часть данной публикации не может быть воспроизведена, распространена или
+        передаваться в любой форме и любыми средствами, включая фотокопирование,
+        запись или другие электронные или механические методы,
+        без предварительного письменного разрешения издателя.</div>
+
+</body>
+
+</html>

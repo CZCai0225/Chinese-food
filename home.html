@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>титульная страница</title>
+    <style>
+        body {
+
+            /* 设置背景图片 */
+            background-image: url("./img/龙.jpg");
+
+            /* 设置背景图片填充方式，这里选择覆盖整个页面 */
+            background-size: cover;
+
+            /* 设置背景图片不重复 */
+            background-repeat: no-repeat;
+
+            /* 设置背景图片始终位于页面的中心 */
+            background-position: center;
+
+            /* 设置背景图片的透明度，这里选择50%的透明度 */
+            opacity: 0.9;
+
+            /* 确保背景图片不会影响到其他元素的透明度 */
+            background-attachment: fixed;
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section h2 {
+            margin-bottom: 10px;
+        }
+
+        /* 将标签页水平排列 */
+        .tab-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 12%;
+        }
+
+        .tab {
+            width: 20%;
+            padding: 10px;
+            background-color: #ccc;
+            border: 1px solid black;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* 默认隐藏所有tab内容 */
+        .tab-content {
+            display: none;
+            margin: 0 15%;
+        }
+
+        /* 显示第一个tab内容 */
+        #tabContent1 {
+            display: block;
+        }
+    </style>
+
+    <script>
+        function showTab(evt, tabIndex) {
+            var i, tabcontent, tablinks;
+
+            // 获取所有选项卡内容元素，隐藏它们
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // 获取所有选项卡链接元素，移除它们的 active 类
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // 显示当前选项卡的内容，并将链接标记为 active
+            document.getElementById(tabIndex).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+</head>
+
+<body style="background-color:beige">
+    <h1>Китайский продуктовый центр</h1>
+    <p style="text-align: center;">Интерфейсные проекты, которые используют только js, html и css для завершения</p>
+
+    <div class="tab-container">
+        <div class="tab" onclick="showTab(event, 'tabContent1')">вступление</div>
+        <div class="tab" onclick="showTab(event, 'tabContent2')">Информация о студенте</div>
+        <div class="tab" onclick="showTab(event, 'tabContent3')">Выставка работ</div>
+        <div class="tab" onclick="showTab(event, 'tabContent4')">Другие ассоциации</div>
+        <div class="tab" onclick="showTab(event, 'tabContent5')">Китайский ресторан</div>
+    </div>
+
+    <div class="tab-content" id="tabContent1">
+        <h2>вступление</h2>
+        <p>Это заключительная работа по окончании информационного курса.Эта работа удобна для китайских студентов,
+            которые могут легко совершать покупки китайской еды онлайн.В настоящее время он временно недоступен для
+            использования.Есть возможность обсудить возможность использования этого в будущем.</p>
+    </div>
+
+    <div class="tab-content" id="tabContent2">
+        <div class="info-section">
+            <h2>Основная информация</h2>
+            <p>Имя：Чэнь Чжэньцай</p>
+            <p>Пол: Мужской</p>
+            <p>Профессия: Студент</p>
+            <p>колледж: Казанский федеральный университет-Подготовительный факультет</p>
+            <br /><br />
+            <h2>Контактная информация</h2>
+            <p>телефон：+79172586321</p>
+            <p>Почта：ChzhenChen@stud.kpfu.ru</p>
+            <p>адрес：<a href="https://yandex.com/maps/-/CDBRJH3N" target="_blank" rel="noopener noreferrer">City of
+                    Kazan, Vakhitovskiy City Administrative District, Tatarstan Street, 2
+                    уч. зд. №33</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="tab-content" id="tabContent3">
+        <div class="info-section">
+            <h2>Выставка работ</h2>
+            <p>Содержание: <a href="./index.html" target="_blank" rel="noopener noreferrer">Китайский продуктовый
+                    центр</a>
+            </p>
+            <p>Введение: Вы можете нажать на нужную китайскую еду на платформе и связаться с соответствующим лицом,
+                чтобы разместить заказ на доставку и покупку.</p>
+        </div>
+    </div>
+
+    <div class="tab-content" id="tabContent4">
+        <h2>Другие ассоциации</h2>
+        <p>Если вы не удовлетворены, вы можете проверить товары на других платформах.</p>
+        <p>Таобао, Китай: <a
+                href="https://uland.taobao.com/sem/tbsearch?refpid=mm_26632258_3504122_32538762&keyword=%E7%BE%8E%E9%A3%9F&clk1=a9b098a0965eeed179df28aea9695619&upsId=a9b098a0965eeed179df28aea9695619"
+                target="_blank" rel="noopener noreferrer">Таобао</a>
+        </p>
+        <p>Цзиндун, Китай: <a
+                href="https://re.jd.com/search?keyword=%e8%89%af%e5%93%81%e9%93%ba%e5%ad%90%e4%bc%91%e9%97%b2%e9%9b%b6%e9%a3%9f&keywordid=521577299778&re_dcp=202m0QjIIg==&traffic_source=1004&test=1&enc=utf8&bd_vid=9544770058095979556&cu=true&utm_source=baidu-search&utm_medium=cpc&utm_campaign=t_262767352_baidusearch&utm_term=521577299778_0_5cec106ffa1b4888b670ca1bafd0a48c"
+                target="_blank" rel="noopener noreferrer">Цзиндун</a>
+        </p>
+        <p>Платформа Amazon: <a
+                href="https://www.amazon.cn/s?k=food&__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&crid=NM9D8WYG9T00&sprefix=food%2Caps%2C285&ref=nb_sb_noss_1"
+                target="_blank" rel="noopener noreferrer">Amazon</a>
+        </p>
+        <p>С нетерпением жду продолжения.</p>
+    </div>
+
+    <div class="tab-content" id="tabContent5">
+        <h2>Китайский ресторан</h2>
+        <p>Это знакомство с китайскими ресторанами Казани. Если вам нравится китайская еда, вы можете ее попробовать.
+        </p>
+        <p>Ланьчжоуская лапша: <a href="https://yandex.com/maps/-/CDBRN-7l" target="_blank"
+                rel="noopener noreferrer">兰州拉面</a>
+        </p>
+        <p>Тоска по дому с лапшой: <a href="https://yandex.com/maps/-/CDBRRNIp" target="_blank"
+                rel="noopener noreferrer">思乡面馆</a>
+        </p>
+        <p>Впечатление от Китая: <a href="https://yandex.com/maps/-/CDBRR66M" target="_blank"
+                rel="noopener noreferrer">印象中国</a>
+        </p>
+        <p>С нетерпением жду продолжения.</p>
+    </div>
+
+</body>
+
+</html>
